@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # Thư mục bạn build ra (hoặc ./ nếu upload toàn bộ)
           server-dir: /      # Thư mục gốc trên server
-          protocol: ftps
-          port: 990 
+          protocol: ftp
+          port: 21
           log-level: verbose
           timeout: 180000 
