@@ -1,0 +1,25 @@
+name: 🚀 Deploy to Somee via FTP
+
+on:
+  push:
+    branches:
+      - main  # hoặc branch bạn muốn deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload files to Somee via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist  # Thư mục bạn build ra (hoặc ./ nếu upload toàn bộ)
+          server-dir: /      # Thư mục gốc trên server
+          protocol: ftp
+          log-level: verbose
