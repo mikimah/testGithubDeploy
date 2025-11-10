@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # Thư mục bạn build ra (hoặc ./ nếu upload toàn bộ)
-          server-dir: /      # Thư mục gốc trên server
+          server-dir: /www.trinhnhatminhDH52201066.somee.com      # Thư mục gốc trên server
           protocol: ftp
           port: 21
           log-level: verbose
