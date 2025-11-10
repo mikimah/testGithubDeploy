@@ -19,7 +19,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist  # Thư mục bạn build ra (hoặc ./ nếu upload toàn bộ)
+          local-dir: ./dist/  # Thư mục bạn build ra (hoặc ./ nếu upload toàn bộ)
           server-dir: /      # Thư mục gốc trên server
           protocol: ftp
           log-level: verbose
